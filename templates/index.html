@@ -6,21 +6,30 @@
     <body>
         <h1>Order List</h1>
         {% for order in orders %}
-        <section>
-                <i>Customer: {{ order.customer_name }}</i>
-                <p>Order Date: {{ order.order_date }}</p>
+        <section class="order-grid-template">
+                <div class="customer-details">
+                    <div class="customer-name">Customer: <b>{{ order.customer.name }}</b></div>
+                    <div class="customer-email">E-mail: <b><a href="mailto:{{ order.customer.email }}">{{ order.customer.email }}</a></b></div>
+                    <div class="order-number">Order Number: <b>{{ order.order_number }} (<a href="/orders/{{ orders.index(order) }}">Order Details</a>)</b></div>
+                    <div class="order-date">Order Date: <b>{{ order.order_date }}</b></div>
+                </div>
+                <section class="order-details">
                 {% for product in order.basket %}
-                <b>Product: {{ product.item }} x {{ product.qty }}</b> - £{{ product.price }}
-                {% set order_total_price = product.price %}
-                <br>
-                {% endfor %}
-                <br>
-                <b>Total for order: £{{ order.basket_total }}</b>
-                <br>
-                <br>
-                <a href="/orders/{{ orders.index(order) }}">Order Details</a>
+                    <div class="product-description">
+                        <p>Product: <i>{{ product.item }}</i></p>
+                    </div>
+                    <div class="product-qty">
+                        <p>Qty: <i>{{ product.qty }}</i> </p>
+                    </div>
+                    <div class="product-price">
+                        <p>Price: <i>£{{ product.price }}</i></p>
+                    </div>
+                    {% endfor %}
+                </section>
         </section>
-        <br>
+        <section class="total-order-price">
+            Total for order: <b>£{{ order.basket_total }}</b>
+        </section>
         {% endfor %}
     </body>
 </html>

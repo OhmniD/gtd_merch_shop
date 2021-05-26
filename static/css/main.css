@@ -1,0 +1,77 @@
+/* .order-grid-template {
+    display: grid;
+    border: 2px solid blue;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 120px);
+} */
+@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
+
+* {
+    font-family: "Coda", Arial, Helvetica, sans-serif
+}
+body {
+    background-color: whitesmoke;
+}
+
+.order-grid-template > p {
+    padding: 8px 4px;
+}
+.customer-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.customer-details > div {
+    
+    padding-left: 5px;
+}
+
+.customer-name {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.customer-email {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.order-number {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.order-date {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.order-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-right: 1px solid black;
+}
+
+.order-details > div {
+    padding-left: 5px;
+}
+.product-description {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.product-qty {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.product-price {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.total-order-price {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

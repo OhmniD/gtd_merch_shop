@@ -2,8 +2,8 @@ import random
 
 class Order():
 
-    def __init__(self, customer_name, order_date, basket):
-        self.customer_name = customer_name
+    def __init__(self, customer, order_date, basket):
+        self.customer = customer
         self.order_date = order_date
         # self.quantity = quantity
         # self.merch_description = merch_description

@@ -29,8 +29,8 @@ basket_2 = [order2_line1, order2_line2]
 basket_3 = [order3_line1, order3_line2, order3_line3, order3_line4]
 
 
-order_001 = Order(customer_1.customer_name, date.today(), basket_1)
-order_002 = Order(customer_2.customer_name, date.today(), basket_2)
-order_003 = Order(customer_3.customer_name, date.today(), basket_3)
+order_001 = Order(customer_1, date.today(), basket_1)
+order_002 = Order(customer_2, date.today(), basket_2)
+order_003 = Order(customer_3, date.today(), basket_3)
 
 orders = [order_001, order_002, order_003]
