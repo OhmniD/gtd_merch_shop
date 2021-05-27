@@ -16,7 +16,7 @@
                 <section class="order-details">
                 {% for product in order.basket %}
                     <div class="product-description">
-                        <p>Product: <i>{{ product.item }}</i></p>
+                        <p>Product: <i>{{ product.item.description }}</i></p>
                     </div>
                     <div class="product-qty">
                         <p>Qty: <i>{{ product.qty }}</i> </p>
